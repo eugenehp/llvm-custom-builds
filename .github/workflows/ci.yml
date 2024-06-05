@@ -44,6 +44,8 @@ jobs:
         if: startsWith(matrix.target.id, 'linux-')
         shell: bash
         run: |
+          sudo apt-get update
+          sudo apt-get upgrade -y
           sudo apt-get install ninja-build -y
       
       - name: Install cross-compilatio tools
